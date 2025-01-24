@@ -1,428 +1,412 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2 (Python 3.11.4 on win32)" generated="2025-01-24T17:33:01.928213" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2 (Python 3.11.4 on win32)" generated="2025-01-25T00:54:12.152260" rpa="false" schemaversion="5">
 <suite id="s1" name="allOnline" source="C:\Users\afnan\Desktop\PROJECT\automation_test_workshop\test_order_success\allOnline.robot">
-<test id="s1-t1" name="ลูกค้าสั่งซื้ออสินค้าเลือกจัดส่งตามที่อยู่และชำระเงินด้วยบัตรเครดิต" line="7">
-<kw name="เปิดบราวเซอร์และเข้าไปที่ all Online">
+<test id="s1-t1" name="ลูกค้าสั่งซื้ออสินค้าเลือกจัดส่งตามที่อยู่และชำระเงินด้วยบัตรเครดิต" line="5">
+<kw name="เปิดบราวเซอร์และเข้าไปที่เว็บไซต์" owner="resources">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-01-24T17:33:02.155103" level="INFO">Opening browser 'chrome' to base url 'https://www.allonline.7eleven.co.th/'.</msg>
-<arg>url=https://www.allonline.7eleven.co.th/</arg>
-<arg>browser=chrome</arg>
+<msg time="2025-01-25T00:54:12.403067" level="INFO">Opening browser 'chrome' to base url 'https://www.allonline.7eleven.co.th/'.</msg>
+<arg>url=${url}</arg>
+<arg>browser=${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-01-24T17:33:02.154603" elapsed="3.245595"/>
+<status status="PASS" start="2025-01-25T00:54:12.402566" elapsed="2.371571"/>
 </kw>
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>seven</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2025-01-24T17:33:05.400198" elapsed="0.334080"/>
+<status status="PASS" start="2025-01-25T00:54:14.774137" elapsed="0.032001"/>
 </kw>
-<status status="PASS" start="2025-01-24T17:33:02.154103" elapsed="3.580175"/>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<status status="PASS" start="2025-01-25T00:54:12.402067" elapsed="2.404071"/>
 </kw>
-<kw name="ลงทะเบียนเข้าใช้งาน">
+<kw name="ลงทะเบียนเข้าใช้งาน" owner="resources">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-01-24T17:33:05.735279" level="INFO">Clicking element '//*[@id="page"]/header/div[4]/div/div/div/ul/li[4]/a'.</msg>
+<msg time="2025-01-25T00:54:14.807640" level="INFO">Clicking element '//*[@id="page"]/header/div[4]/div/div/div/ul/li[4]/a'.</msg>
 <arg>//*[@id="page"]/header/div[4]/div/div/div/ul/li[4]/a</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-24T17:33:05.735279" elapsed="0.607443"/>
+<status status="PASS" start="2025-01-25T00:54:14.807137" elapsed="0.619010"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>//*[@id="__next"]/div/div/div[2]/div[2]/div/div</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-01-24T17:33:06.343224" elapsed="0.020016"/>
+<status status="PASS" start="2025-01-25T00:54:15.426647" elapsed="0.048512"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-01-24T17:33:06.363740" level="INFO">Typing text 'naaanlw22@gmail.com' into text field 'name=email'.</msg>
+<msg time="2025-01-25T00:54:15.475660" level="INFO">Typing text 'naaanlw22@gmail.com' into text field 'name=email'.</msg>
 <arg>name=email</arg>
-<arg>naaanlw22@gmail.com</arg>
+<arg>${email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-24T17:33:06.363740" elapsed="0.123152"/>
+<status status="PASS" start="2025-01-25T00:54:15.475159" elapsed="0.160586"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-01-24T17:33:06.487393" level="INFO">Typing text 'C5kykR!!5q53bWx' into text field 'name=password'.</msg>
+<msg time="2025-01-25T00:54:15.636246" level="INFO">Typing text 'C5kykR!!5q53bWx' into text field 'name=password'.</msg>
 <arg>name=password</arg>
-<arg>C5kykR!!5q53bWx</arg>
+<arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-24T17:33:06.487393" elapsed="0.095766"/>
+<status status="PASS" start="2025-01-25T00:54:15.635745" elapsed="0.103715"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-01-24T17:33:06.583656" level="INFO">Clicking element '//*[@id="__next"]/div/div/div[2]/div[2]/div/div/div/div[6]/a[1]'.</msg>
+<msg time="2025-01-25T00:54:15.739959" level="INFO">Clicking element '//*[@id="__next"]/div/div/div[2]/div[2]/div/div/div/div[6]/a[1]'.</msg>
 <arg>//*[@id="__next"]/div/div/div[2]/div[2]/div/div/div/div[6]/a[1]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-24T17:33:06.583159" elapsed="0.062505"/>
+<status status="PASS" start="2025-01-25T00:54:15.739959" elapsed="0.064502"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>//*[@id="__next"]/div/div/div[2]/div[2]/div/div/div[3]/div/button[2]</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-01-24T17:33:06.646165" elapsed="1.859325"/>
+<status status="PASS" start="2025-01-25T00:54:15.804461" elapsed="1.718852"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-01-24T17:33:08.505990" level="INFO">Clicking element '//*[@id="__next"]/div/div/div[2]/div[2]/div/div/div[3]/div/button[2]'.</msg>
+<msg time="2025-01-25T00:54:17.524313" level="INFO">Clicking element '//*[@id="__next"]/div/div/div[2]/div[2]/div/div/div[3]/div/button[2]'.</msg>
 <arg>//*[@id="__next"]/div/div/div[2]/div[2]/div/div/div[3]/div/button[2]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-24T17:33:08.505990" elapsed="0.037018"/>
+<status status="PASS" start="2025-01-25T00:54:17.523814" elapsed="0.042513"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>name=q</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-01-24T17:33:08.543509" elapsed="4.966314"/>
+<status status="PASS" start="2025-01-25T00:54:17.566825" elapsed="4.441221"/>
 </kw>
-<status status="PASS" start="2025-01-24T17:33:05.734779" elapsed="7.775044"/>
+<arg>${EMAIL}</arg>
+<arg>${PASSWORD}</arg>
+<status status="PASS" start="2025-01-25T00:54:14.806636" elapsed="7.201410"/>
 </kw>
-<kw name="ค้นหายำยำช้างน้อย รสบาร์บีคิว 120 กรัมและพบข้อมูลที่ค้นหา">
+<kw name="ค้นหาสินค้า" owner="resources">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-01-24T17:33:13.510823" level="INFO">Typing text 'ยำยำช้างน้อย รสบาร์บีคิว 120 กรัม' into text field 'name=q'.</msg>
+<msg time="2025-01-25T00:54:22.009044" level="INFO">Typing text 'ยำยำช้างน้อย รสบาร์บีคิว 120 กรัม' into text field 'name=q'.</msg>
 <arg>name=q</arg>
-<arg>ยำยำช้างน้อย รสบาร์บีคิว 120 กรัม</arg>
+<arg>${product_name}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-24T17:33:13.510823" elapsed="0.179035"/>
+<status status="PASS" start="2025-01-25T00:54:22.009044" elapsed="0.693706"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-01-24T17:33:13.690358" level="INFO">Clicking element 'xpath=//*[@id="search_id_form"]/div/span/button'.</msg>
+<msg time="2025-01-25T00:54:22.703250" level="INFO">Clicking element 'xpath=//*[@id="search_id_form"]/div/span/button'.</msg>
 <arg>xpath=//*[@id="search_id_form"]/div/span/button</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-24T17:33:13.689858" elapsed="4.697660"/>
+<status status="PASS" start="2025-01-25T00:54:22.702750" elapsed="4.589450"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>xpath=//*[@id="page"]/div[2]/div[2]/div/div/div[2]/div/div/div/div/div/div[3]/div[1]</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-01-24T17:33:18.388018" elapsed="0.076505"/>
+<status status="PASS" start="2025-01-25T00:54:27.292200" elapsed="0.018500"/>
 </kw>
-<status status="PASS" start="2025-01-24T17:33:13.510325" elapsed="4.954198"/>
+<arg>${PRODUCT}</arg>
+<status status="PASS" start="2025-01-25T00:54:22.008547" elapsed="5.302652"/>
 </kw>
-<kw name="กดเลือกสินค้าและตรวจสอบยอดจำนวนของสินค้าเท่ากับ1">
+<kw name="เลือกสินค้าและตรวจสอบ" owner="resources">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-01-24T17:33:18.466523" level="INFO">Clicking element 'xpath=//*[@id="page"]/div[2]/div[2]/div/div/div[2]/div/div/div/div/div/div[3]/div[1]'.</msg>
+<msg time="2025-01-25T00:54:27.311699" level="INFO">Clicking element 'xpath=//*[@id="page"]/div[2]/div[2]/div/div/div[2]/div/div/div/div/div/div[3]/div[1]'.</msg>
 <arg>xpath=//*[@id="page"]/div[2]/div[2]/div/div/div[2]/div/div/div/div/div/div[3]/div[1]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-24T17:33:18.466023" elapsed="0.544660"/>
+<status status="PASS" start="2025-01-25T00:54:27.311699" elapsed="0.722293"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>//*[@id="article-form"]/div[2]</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-01-24T17:33:19.010683" elapsed="0.057507"/>
+<status status="PASS" start="2025-01-25T00:54:28.034492" elapsed="0.014001"/>
 </kw>
 <kw name="Element Attribute Value Should Be" owner="SeleniumLibrary">
-<msg time="2025-01-24T17:33:19.094700" level="INFO">Element 'name=order_count' attribute 'value' contains value '1'.</msg>
+<msg time="2025-01-25T00:54:28.059992" level="INFO">Element 'name=order_count' attribute 'value' contains value '1'.</msg>
 <arg>name=order_count</arg>
 <arg>value</arg>
 <arg>1</arg>
 <doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
-<status status="PASS" start="2025-01-24T17:33:19.068190" elapsed="0.026510"/>
+<status status="PASS" start="2025-01-25T00:54:28.048993" elapsed="0.010999"/>
 </kw>
-<status status="PASS" start="2025-01-24T17:33:18.465524" elapsed="0.629674"/>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-01-25T00:54:28.076991" level="INFO">Element '//*[@id="article-form"]/div[1]/div[3]/div/div[2]/div/span/span' contains text 'คุณจะได้รับ 9 คะแนน'.</msg>
+<arg>//*[@id="article-form"]/div[1]/div[3]/div/div[2]/div/span/span</arg>
+<arg>คุณจะได้รับ 9 คะแนน</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-01-25T00:54:28.060490" elapsed="0.017001"/>
 </kw>
-<kw name="กดเพิ่มจำนวนสินค้าเป็น 5 ชิ้น">
+<status status="PASS" start="2025-01-25T00:54:27.311199" elapsed="0.766292"/>
+</kw>
+<kw name="เพิ่มจำนวนสินค้า" owner="resources">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-01-24T17:33:19.096198" level="INFO">Clicking element '//*[@id="article-form"]/div[2]/div[2]/div[1]/span[2]/a'.</msg>
+<msg time="2025-01-25T00:54:28.078490" level="INFO">Clicking element '//*[@id="article-form"]/div[2]/div[2]/div[1]/span[2]/a'.</msg>
 <arg>//*[@id="article-form"]/div[2]/div[2]/div[1]/span[2]/a</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-24T17:33:19.095698" elapsed="0.068505"/>
+<status status="PASS" start="2025-01-25T00:54:28.077991" elapsed="0.047501"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-01-24T17:33:19.164703" level="INFO">Clicking element '//*[@id="article-form"]/div[2]/div[2]/div[1]/span[2]/a'.</msg>
+<msg time="2025-01-25T00:54:28.125998" level="INFO">Clicking element '//*[@id="article-form"]/div[2]/div[2]/div[1]/span[2]/a'.</msg>
 <arg>//*[@id="article-form"]/div[2]/div[2]/div[1]/span[2]/a</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-24T17:33:19.164203" elapsed="0.039009"/>
+<status status="PASS" start="2025-01-25T00:54:28.125998" elapsed="0.063011"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-01-24T17:33:19.203711" level="INFO">Clicking element '//*[@id="article-form"]/div[2]/div[2]/div[1]/span[2]/a'.</msg>
+<msg time="2025-01-25T00:54:28.189510" level="INFO">Clicking element '//*[@id="article-form"]/div[2]/div[2]/div[1]/span[2]/a'.</msg>
 <arg>//*[@id="article-form"]/div[2]/div[2]/div[1]/span[2]/a</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-24T17:33:19.203212" elapsed="0.038500"/>
+<status status="PASS" start="2025-01-25T00:54:28.189009" elapsed="0.036021"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-01-24T17:33:19.242211" level="INFO">Clicking element '//*[@id="article-form"]/div[2]/div[2]/div[1]/span[2]/a'.</msg>
+<msg time="2025-01-25T00:54:28.225530" level="INFO">Clicking element '//*[@id="article-form"]/div[2]/div[2]/div[1]/span[2]/a'.</msg>
 <arg>//*[@id="article-form"]/div[2]/div[2]/div[1]/span[2]/a</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-24T17:33:19.242211" elapsed="0.039017"/>
+<status status="PASS" start="2025-01-25T00:54:28.225030" elapsed="0.038511"/>
 </kw>
 <kw name="Element Attribute Value Should Be" owner="SeleniumLibrary">
-<msg time="2025-01-24T17:33:19.290728" level="INFO">Element 'name=order_count' attribute 'value' contains value '5'.</msg>
+<msg time="2025-01-25T00:54:28.272043" level="INFO">Element 'name=order_count' attribute 'value' contains value '5'.</msg>
 <arg>name=order_count</arg>
 <arg>value</arg>
 <arg>5</arg>
 <doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
-<status status="PASS" start="2025-01-24T17:33:19.281228" elapsed="0.009500"/>
+<status status="PASS" start="2025-01-25T00:54:28.263541" elapsed="0.008502"/>
 </kw>
-<status status="PASS" start="2025-01-24T17:33:19.095198" elapsed="0.195530"/>
+<status status="PASS" start="2025-01-25T00:54:28.077991" elapsed="0.194552"/>
 </kw>
-<kw name="กดซื้อเลยและตรวจสอบว่าแสดงหน้าจัดส่งสินค้า">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-01-24T17:33:19.291728" level="INFO">Clicking element '//*[@id="article-form"]/div[2]/div[2]/div[4]/div[2]/button'.</msg>
+<msg time="2025-01-25T00:54:28.273040" level="INFO">Clicking element '//*[@id="article-form"]/div[2]/div[2]/div[4]/div[2]/button'.</msg>
 <arg>//*[@id="article-form"]/div[2]/div[2]/div[4]/div[2]/button</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-24T17:33:19.291728" elapsed="0.932793"/>
+<status status="PASS" start="2025-01-25T00:54:28.273040" elapsed="0.971786"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>//*[@id="page"]/div/div[3]/div/div</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-01-24T17:33:20.224521" elapsed="0.017501"/>
+<status status="PASS" start="2025-01-25T00:54:29.245327" elapsed="0.012500"/>
 </kw>
 <kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2025-01-24T17:33:20.258524" level="INFO">Element '//*[@id="page"]/div/div[3]/div/div' contains text 'รายละเอียดการจัดส่งสินค้า'.</msg>
+<msg time="2025-01-25T00:54:29.267327" level="INFO">Element '//*[@id="page"]/div/div[3]/div/div' contains text 'รายละเอียดการจัดส่งสินค้า'.</msg>
 <arg>//*[@id="page"]/div/div[3]/div/div</arg>
 <arg>รายละเอียดการจัดส่งสินค้า</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2025-01-24T17:33:20.242022" elapsed="0.017004"/>
+<status status="PASS" start="2025-01-25T00:54:29.258330" elapsed="0.008997"/>
 </kw>
-<status status="PASS" start="2025-01-24T17:33:19.291228" elapsed="0.967798"/>
-</kw>
-<kw name="กดจัดส่งตามที่อยู่และกรอกรายละเอียดการจัดส่ง">
+<kw name="กรอกที่อยู่จัดส่ง" owner="resources">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-01-24T17:33:20.260021" level="INFO">Clicking element '//*[@id="address-tabs"]/ul/li[2]/a'.</msg>
+<msg time="2025-01-25T00:54:29.268326" level="INFO">Clicking element '//*[@id="address-tabs"]/ul/li[2]/a'.</msg>
 <arg>//*[@id="address-tabs"]/ul/li[2]/a</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-24T17:33:20.259521" elapsed="0.056771"/>
+<status status="PASS" start="2025-01-25T00:54:29.267826" elapsed="0.052001"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-01-24T17:33:20.316791" level="INFO">Clicking element '//*[@id="addressbook"]/div/div[2]/div[2]'.</msg>
+<msg time="2025-01-25T00:54:29.320325" level="INFO">Clicking element '//*[@id="addressbook"]/div/div[2]/div[2]'.</msg>
 <arg>//*[@id="addressbook"]/div/div[2]/div[2]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-24T17:33:20.316791" elapsed="0.347771"/>
+<status status="PASS" start="2025-01-25T00:54:29.319827" elapsed="0.372745"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-01-24T17:33:20.665562" level="INFO">Typing text 'พันกรร' into text field 'name=shippingData.homeShippingData.newShippingAddress.firstname'.</msg>
+<msg time="2025-01-25T00:54:29.693070" level="INFO">Typing text 'พันกรร' into text field 'name=shippingData.homeShippingData.newShippingAddress.firstname'.</msg>
 <arg>name=shippingData.homeShippingData.newShippingAddress.firstname</arg>
-<arg>พันกรร</arg>
+<arg>${firstname}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-24T17:33:20.665062" elapsed="0.057525"/>
+<status status="PASS" start="2025-01-25T00:54:29.692572" elapsed="0.074514"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-01-24T17:33:20.723087" level="INFO">Typing text 'ชมจันทร์' into text field 'name=shippingData.homeShippingData.newShippingAddress.lastname'.</msg>
+<msg time="2025-01-25T00:54:29.767586" level="INFO">Typing text 'ชมจันทร์' into text field 'name=shippingData.homeShippingData.newShippingAddress.lastname'.</msg>
 <arg>name=shippingData.homeShippingData.newShippingAddress.lastname</arg>
-<arg>ชมจันทร์</arg>
+<arg>${lastname}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-24T17:33:20.722587" elapsed="0.051032"/>
+<status status="PASS" start="2025-01-25T00:54:29.767086" elapsed="0.072509"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-01-24T17:33:20.774121" level="INFO">Typing text '0619917765' into text field 'name=shippingData.homeShippingData.newShippingAddress.mobilePhone'.</msg>
+<msg time="2025-01-25T00:54:29.840094" level="INFO">Typing text '0619917765' into text field 'name=shippingData.homeShippingData.newShippingAddress.mobilePhone'.</msg>
 <arg>name=shippingData.homeShippingData.newShippingAddress.mobilePhone</arg>
-<arg>0619917765</arg>
+<arg>${phone}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-24T17:33:20.774121" elapsed="0.051208"/>
+<status status="PASS" start="2025-01-25T00:54:29.839595" elapsed="0.082060"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-01-24T17:33:20.825831" level="INFO">Typing text '45/9' into text field 'name=shippingData.homeShippingData.newShippingAddress.addrNo'.</msg>
+<msg time="2025-01-25T00:54:29.921655" level="INFO">Typing text '45/9' into text field 'name=shippingData.homeShippingData.newShippingAddress.addrNo'.</msg>
 <arg>name=shippingData.homeShippingData.newShippingAddress.addrNo</arg>
-<arg>45/9</arg>
+<arg>${address_no}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-24T17:33:20.825329" elapsed="0.073129"/>
+<status status="PASS" start="2025-01-25T00:54:29.921655" elapsed="0.063024"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-01-24T17:33:20.898958" level="INFO">Typing text '7' into text field 'name=shippingData.homeShippingData.newShippingAddress.moo'.</msg>
+<msg time="2025-01-25T00:54:29.985179" level="INFO">Typing text '7' into text field 'name=shippingData.homeShippingData.newShippingAddress.moo'.</msg>
 <arg>name=shippingData.homeShippingData.newShippingAddress.moo</arg>
-<arg>7</arg>
+<arg>${moo}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-24T17:33:20.898458" elapsed="0.046000"/>
+<status status="PASS" start="2025-01-25T00:54:29.984679" elapsed="0.056181"/>
 </kw>
 <kw name="Select From List By Label" owner="SeleniumLibrary">
-<msg time="2025-01-24T17:33:20.944957" level="INFO">Selecting options from selection list 'id=new-address-province' by label สมุทรปราการ.</msg>
+<msg time="2025-01-25T00:54:30.041360" level="INFO">Selecting options from selection list 'id=new-address-province' by label สมุทรปราการ.</msg>
 <arg>id=new-address-province</arg>
-<arg>สมุทรปราการ</arg>
+<arg>${province}</arg>
 <doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<status status="PASS" start="2025-01-24T17:33:20.944458" elapsed="0.029016"/>
+<status status="PASS" start="2025-01-25T00:54:30.040860" elapsed="0.026999"/>
 </kw>
 <kw name="Select From List By Label" owner="SeleniumLibrary">
-<msg time="2025-01-24T17:33:20.973974" level="INFO">Selecting options from selection list 'id=new-address-district' by label บางพลี.</msg>
+<msg time="2025-01-25T00:54:30.068357" level="INFO">Selecting options from selection list 'id=new-address-district' by label บางพลี.</msg>
 <arg>id=new-address-district</arg>
-<arg>บางพลี</arg>
+<arg>${district}</arg>
 <doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<status status="PASS" start="2025-01-24T17:33:20.973474" elapsed="0.678371"/>
+<status status="PASS" start="2025-01-25T00:54:30.068357" elapsed="0.634650"/>
 </kw>
 <kw name="Select From List By Label" owner="SeleniumLibrary">
-<msg time="2025-01-24T17:33:21.652342" level="INFO">Selecting options from selection list 'id=new-address-sub-district' by label บางปลา.</msg>
+<msg time="2025-01-25T00:54:30.703507" level="INFO">Selecting options from selection list 'id=new-address-sub-district' by label บางปลา.</msg>
 <arg>id=new-address-sub-district</arg>
-<arg>บางปลา</arg>
+<arg>${subdistrict}</arg>
 <doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<status status="PASS" start="2025-01-24T17:33:21.652342" elapsed="0.343337"/>
+<status status="PASS" start="2025-01-25T00:54:30.703007" elapsed="0.424239"/>
+</kw>
+<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
+<arg>id=selected-location</arg>
+<arg>เลือกที่อยู่</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" start="2025-01-25T00:54:31.127246" elapsed="0.489941"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-25T00:54:36.617958" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-25T00:54:31.617187" elapsed="5.000771"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-01-24T17:33:21.996179" level="INFO">Clicking element 'id=continue-payment-btn'.</msg>
+<msg time="2025-01-25T00:54:36.618463" level="INFO">Clicking element 'id=selected-location'.</msg>
+<arg>id=selected-location</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-25T00:54:36.617958" elapsed="0.044524"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>id=selected-location</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2025-01-25T00:54:36.662982" elapsed="0.221121"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=conf-dif-addr</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-25T00:54:36.884252" elapsed="0.011852"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-25T00:54:36.896104" level="INFO">Clicking element 'id=conf-dif-addr'.</msg>
+<arg>id=conf-dif-addr</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-25T00:54:36.896104" elapsed="0.040503"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-25T00:54:36.936607" level="INFO">Clicking element 'id=continue-payment-btn'.</msg>
 <arg>id=continue-payment-btn</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-24T17:33:21.996179" elapsed="1.495600"/>
+<status status="PASS" start="2025-01-25T00:54:36.936607" elapsed="1.894279"/>
 </kw>
-<status status="PASS" start="2025-01-24T17:33:20.259521" elapsed="3.232258"/>
+<arg>พันกรร</arg>
+<arg>ชมจันทร์</arg>
+<arg>0619917765</arg>
+<arg>45/9</arg>
+<arg>7</arg>
+<arg>สมุทรปราการ</arg>
+<arg>บางพลี</arg>
+<arg>บางปลา</arg>
+<status status="PASS" start="2025-01-25T00:54:29.267826" elapsed="9.563559"/>
 </kw>
-<kw name="กรอกรายละเอียดการชำระเงิน">
+<kw name="ตรวจสอบราคา" owner="resources">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>//*[@id="payment-options"]/div[1]</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-01-24T17:33:23.493281" elapsed="0.023498"/>
+<status status="PASS" start="2025-01-25T00:54:38.832385" elapsed="0.027016"/>
 </kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-01-25T00:54:38.872402" level="INFO">Element '//*[@id="js-invoice-details-tbody"]/tr[1]/td[2]/b' contains text '฿ 185'.</msg>
+<arg>//*[@id="js-invoice-details-tbody"]/tr[1]/td[2]/b</arg>
+<arg>฿ ${product_price}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-01-25T00:54:38.859401" elapsed="0.013001"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-01-25T00:54:38.886912" level="INFO">Element '//*[@id="js-invoice-details-tbody"]/tr[2]/td[2]/b' contains text '฿ 35'.</msg>
+<arg>//*[@id="js-invoice-details-tbody"]/tr[2]/td[2]/b</arg>
+<arg>฿ ${shipping_fee}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-01-25T00:54:38.872900" elapsed="0.014511"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-01-25T00:54:38.898910" level="INFO">Element 'id=totalAmount' contains text '฿ 220'.</msg>
+<arg>id=totalAmount</arg>
+<arg>฿ ${total_price}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-01-25T00:54:38.887411" elapsed="0.011499"/>
+</kw>
+<arg>185</arg>
+<arg>35</arg>
+<arg>220</arg>
+<status status="PASS" start="2025-01-25T00:54:38.831885" elapsed="0.067025"/>
+</kw>
+<kw name="กรอกข้อมูลบัตรเครดิต" owner="resources">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-01-24T17:33:23.517280" level="INFO">Clicking element '//*[@id="payment-options"]/div[1]'.</msg>
+<msg time="2025-01-25T00:54:38.899910" level="INFO">Clicking element '//*[@id="payment-options"]/div[1]'.</msg>
 <arg>//*[@id="payment-options"]/div[1]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-24T17:33:23.516779" elapsed="0.047504"/>
+<status status="PASS" start="2025-01-25T00:54:38.899910" elapsed="0.057999"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>//*[@id="stepModel"]/div[1]/div[2]/footer/div/div/button</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-01-24T17:33:23.564283" elapsed="0.012008"/>
+<status status="PASS" start="2025-01-25T00:54:38.957909" elapsed="0.013501"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-25T00:54:43.972371" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-25T00:54:38.971410" elapsed="5.000961"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-01-24T17:33:23.576291" level="INFO">Clicking element '//*[@id="stepModel"]/div[1]/div[2]/footer/div/div/button'.</msg>
-<msg time="2025-01-24T17:33:24.730694" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-40.png"&gt;&lt;img src="selenium-screenshot-40.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-01-24T17:33:24.731193" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button type="submit" class="btn js-pdbc btn-proceed btn-green gradient btn-lg btn-half wide pull-right space-down continue-payment-btn continue-payment-btn-popup disabled"&gt;...&lt;/button&gt; is not clickable at point (1046, 726). Other element would receive the click: &lt;div class="col-xs-12 col-sm-6 basket"&gt;...&lt;/div&gt;
-  (Session info: chrome=131.0.6778.267)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7DA1880D5+2992373]
-	(No symbol) [0x00007FF7D9E1BFD0]
-	(No symbol) [0x00007FF7D9CB590A]
-	(No symbol) [0x00007FF7D9D10F2E]
-	(No symbol) [0x00007FF7D9D0E9CC]
-	(No symbol) [0x00007FF7D9D0BBA6]
-	(No symbol) [0x00007FF7D9D0AB01]
-	(No symbol) [0x00007FF7D9CFCD40]
-	(No symbol) [0x00007FF7D9D2F36A]
-	(No symbol) [0x00007FF7D9CFC596]
-	(No symbol) [0x00007FF7D9D2F580]
-	(No symbol) [0x00007FF7D9D4F584]
-	(No symbol) [0x00007FF7D9D2F113]
-	(No symbol) [0x00007FF7D9CFA918]
-	(No symbol) [0x00007FF7D9CFBA81]
-	GetHandleVerifier [0x00007FF7DA1E6A2D+3379789]
-	GetHandleVerifier [0x00007FF7DA1FC32D+3468109]
-	GetHandleVerifier [0x00007FF7DA1F0043+3418211]
-	GetHandleVerifier [0x00007FF7D9F7C78B+847787]
-	(No symbol) [0x00007FF7D9E2757F]
-	(No symbol) [0x00007FF7D9E22FC4]
-	(No symbol) [0x00007FF7D9E2315D]
-	(No symbol) [0x00007FF7D9E12979]
-	BaseThreadInitThunk [0x00007FFFEB1D259D+29]
-	RtlUserThreadStart [0x00007FFFEBECAF38+40]
-</msg>
-<arg>//*[@id="stepModel"]/div[1]/div[2]/footer/div/div/button</arg>
+<msg time="2025-01-25T00:54:43.972880" level="INFO">Clicking element '//*[@id="stepModel"]/div[1]/div[2]/footer/div/div/button/i'.</msg>
+<arg>//*[@id="stepModel"]/div[1]/div[2]/footer/div/div/button/i</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="FAIL" start="2025-01-24T17:33:23.576291" elapsed="1.156901">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button type="submit" class="btn js-pdbc btn-proceed btn-green gradient btn-lg btn-half wide pull-right space-down continue-payment-btn continue-payment-btn-popup disabled"&gt;...&lt;/button&gt; is not clickable at point (1046, 726). Other element would receive the click: &lt;div class="col-xs-12 col-sm-6 basket"&gt;...&lt;/div&gt;
-  (Session info: chrome=131.0.6778.267)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7DA1880D5+2992373]
-	(No symbol) [0x00007FF7D9E1BFD0]
-	(No symbol) [0x00007FF7D9CB590A]
-	(No symbol) [0x00007FF7D9D10F2E]
-	(No symbol) [0x00007FF7D9D0E9CC]
-	(No symbol) [0x00007FF7D9D0BBA6]
-	(No symbol) [0x00007FF7D9D0AB01]
-	(No symbol) [0x00007FF7D9CFCD40]
-	(No symbol) [0x00007FF7D9D2F36A]
-	(No symbol) [0x00007FF7D9CFC596]
-	(No symbol) [0x00007FF7D9D2F580]
-	(No symbol) [0x00007FF7D9D4F584]
-	(No symbol) [0x00007FF7D9D2F113]
-	(No symbol) [0x00007FF7D9CFA918]
-	(No symbol) [0x00007FF7D9CFBA81]
-	GetHandleVerifier [0x00007FF7DA1E6A2D+3379789]
-	GetHandleVerifier [0x00007FF7DA1FC32D+3468109]
-	GetHandleVerifier [0x00007FF7DA1F0043+3418211]
-	GetHandleVerifier [0x00007FF7D9F7C78B+847787]
-	(No symbol) [0x00007FF7D9E2757F]
-	(No symbol) [0x00007FF7D9E22FC4]
-	(No symbol) [0x00007FF7D9E2315D]
-	(No symbol) [0x00007FF7D9E12979]
-	BaseThreadInitThunk [0x00007FFFEB1D259D+29]
-	RtlUserThreadStart [0x00007FFFEBECAF38+40]
-</status>
+<status status="PASS" start="2025-01-25T00:54:43.972371" elapsed="0.039507"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-25T00:54:49.012889" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-25T00:54:44.012380" elapsed="5.000509"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>id=cardName</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2025-01-24T17:33:24.733693" elapsed="0.000000"/>
+<status status="PASS" start="2025-01-25T00:54:49.012889" elapsed="0.223799"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-25T00:54:49.237188" level="INFO">Typing text 'พันกรร ชมจันทร์' into text field 'id=cardName'.</msg>
 <arg>id=cardName</arg>
-<arg>พันกรร ชมจันทร์</arg>
+<arg>${card_name}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-01-24T17:33:24.733693" elapsed="0.000000"/>
+<status status="PASS" start="2025-01-25T00:54:49.236688" elapsed="0.075512"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-25T00:54:49.312699" level="INFO">Typing text '46246977491778712' into text field 'id=cardNumber'.</msg>
 <arg>id=cardNumber</arg>
-<arg>46246977491778712</arg>
+<arg>${card_number}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-01-24T17:33:24.733693" elapsed="0.000000"/>
+<status status="PASS" start="2025-01-25T00:54:49.312200" elapsed="0.130526"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-25T00:54:49.443225" level="INFO">Typing text '01/29' into text field 'id=expiryDate'.</msg>
 <arg>id=expiryDate</arg>
-<arg>01/29</arg>
+<arg>${expiry_date}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-01-24T17:33:24.734195" elapsed="0.000000"/>
+<status status="PASS" start="2025-01-25T00:54:49.442726" elapsed="0.085796"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-25T00:54:49.529022" level="INFO">Typing text '476' into text field 'id=cvCode'.</msg>
 <arg>id=cvCode</arg>
-<arg>476</arg>
+<arg>${cvv}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-01-24T17:33:24.734195" elapsed="0.000000"/>
+<status status="PASS" start="2025-01-25T00:54:49.529022" elapsed="0.065404"/>
 </kw>
-<status status="FAIL" start="2025-01-24T17:33:23.492781" elapsed="1.241414">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button type="submit" class="btn js-pdbc btn-proceed btn-green gradient btn-lg btn-half wide pull-right space-down continue-payment-btn continue-payment-btn-popup disabled"&gt;...&lt;/button&gt; is not clickable at point (1046, 726). Other element would receive the click: &lt;div class="col-xs-12 col-sm-6 basket"&gt;...&lt;/div&gt;
-  (Session info: chrome=131.0.6778.267)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7DA1880D5+2992373]
-	(No symbol) [0x00007FF7D9E1BFD0]
-	(No symbol) [0x00007FF7D9CB590A]
-	(No symbol) [0x00007FF7D9D10F2E]
-	(No symbol) [0x00007FF7D9D0E9CC]
-	(No symbol) [0x00007FF7D9D0BBA6]
-	(No symbol) [0x00007FF7D9D0AB01]
-	(No symbol) [0x00007FF7D9CFCD40]
-	(No symbol) [0x00007FF7D9D2F36A]
-	(No symbol) [0x00007FF7D9CFC596]
-	(No symbol) [0x00007FF7D9D2F580]
-	(No symbol) [0x00007FF7D9D4F584]
-	(No symbol) [0x00007FF7D9D2F113]
-	(No symbol) [0x00007FF7D9CFA918]
-	(No symbol) [0x00007FF7D9CFBA81]
-	GetHandleVerifier [0x00007FF7DA1E6A2D+3379789]
-	GetHandleVerifier [0x00007FF7DA1FC32D+3468109]
-	GetHandleVerifier [0x00007FF7DA1F0043+3418211]
-	GetHandleVerifier [0x00007FF7D9F7C78B+847787]
-	(No symbol) [0x00007FF7D9E2757F]
-	(No symbol) [0x00007FF7D9E22FC4]
-	(No symbol) [0x00007FF7D9E2315D]
-	(No symbol) [0x00007FF7D9E12979]
-	BaseThreadInitThunk [0x00007FFFEB1D259D+29]
-	RtlUserThreadStart [0x00007FFFEBECAF38+40]
-</status>
+<arg>พันกรร ชมจันทร์</arg>
+<arg>46246977491778712</arg>
+<arg>01/29</arg>
+<arg>476</arg>
+<status status="PASS" start="2025-01-25T00:54:38.899409" elapsed="10.695017"/>
 </kw>
-<status status="FAIL" start="2025-01-24T17:33:02.151605" elapsed="22.583086">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button type="submit" class="btn js-pdbc btn-proceed btn-green gradient btn-lg btn-half wide pull-right space-down continue-payment-btn continue-payment-btn-popup disabled"&gt;...&lt;/button&gt; is not clickable at point (1046, 726). Other element would receive the click: &lt;div class="col-xs-12 col-sm-6 basket"&gt;...&lt;/div&gt;
-  (Session info: chrome=131.0.6778.267)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7DA1880D5+2992373]
-	(No symbol) [0x00007FF7D9E1BFD0]
-	(No symbol) [0x00007FF7D9CB590A]
-	(No symbol) [0x00007FF7D9D10F2E]
-	(No symbol) [0x00007FF7D9D0E9CC]
-	(No symbol) [0x00007FF7D9D0BBA6]
-	(No symbol) [0x00007FF7D9D0AB01]
-	(No symbol) [0x00007FF7D9CFCD40]
-	(No symbol) [0x00007FF7D9D2F36A]
-	(No symbol) [0x00007FF7D9CFC596]
-	(No symbol) [0x00007FF7D9D2F580]
-	(No symbol) [0x00007FF7D9D4F584]
-	(No symbol) [0x00007FF7D9D2F113]
-	(No symbol) [0x00007FF7D9CFA918]
-	(No symbol) [0x00007FF7D9CFBA81]
-	GetHandleVerifier [0x00007FF7DA1E6A2D+3379789]
-	GetHandleVerifier [0x00007FF7DA1FC32D+3468109]
-	GetHandleVerifier [0x00007FF7DA1F0043+3418211]
-	GetHandleVerifier [0x00007FF7D9F7C78B+847787]
-	(No symbol) [0x00007FF7D9E2757F]
-	(No symbol) [0x00007FF7D9E22FC4]
-	(No symbol) [0x00007FF7D9E2315D]
-	(No symbol) [0x00007FF7D9E12979]
-	BaseThreadInitThunk [0x00007FFFEB1D259D+29]
-	RtlUserThreadStart [0x00007FFFEBECAF38+40]
-</status>
+<status status="PASS" start="2025-01-25T00:54:12.399566" elapsed="37.195360"/>
 </test>
-<status status="FAIL" start="2025-01-24T17:33:01.929211" elapsed="22.807481"/>
+<status status="PASS" start="2025-01-25T00:54:12.153261" elapsed="37.442165"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="allOnline" id="s1" pass="0" fail="1" skip="0">allOnline</stat>
+<stat name="allOnline" id="s1" pass="1" fail="0" skip="0">allOnline</stat>
 </suite>
 </statistics>
 <errors>
